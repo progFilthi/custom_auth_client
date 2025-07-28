@@ -16,7 +16,7 @@ export function SignUpForm({
   ...props
 }: React.ComponentProps<"div">) {
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={cn("flex flex-col gap-6 mb-12", className)} {...props}>
       <Card>
         <CardHeader>
           <CardTitle>Sign up to your account</CardTitle>
@@ -25,7 +25,19 @@ export function SignUpForm({
         <CardContent>
           <form>
             <div className="flex flex-col gap-6">
-              <div className="grid gap-3">
+              <div className="grid gap-2">
+                <Label htmlFor="first_name">First Name</Label>
+                <Input id="first_name" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="last_name">Last Name</Label>
+                <Input id="last_name" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="user_name">Username</Label>
+                <Input id="user_name" required />
+              </div>
+              <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
@@ -34,7 +46,7 @@ export function SignUpForm({
                   required
                 />
               </div>
-              <div className="grid gap-3">
+              <div className="grid gap-2">
                 <div className="flex items-center">
                   <Label htmlFor="password">Password</Label>
                   <a
@@ -46,7 +58,7 @@ export function SignUpForm({
                 </div>
                 <Input id="password" type="password" required />
               </div>
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
                 <Button type="submit" className="w-full">
                   Sign up
                 </Button>
